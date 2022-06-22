@@ -24,21 +24,21 @@ namespace MarsRover.WebApi.Controllers
         /// <summary>
         /// Translate recieved commands for Mars Roter to move
         /// </summary>
-        /// <param name="edges">Mars Rover wraps at edges. Edges are 2 positive integer numbers like 5 5</param>
-        /// <param name="obstacles">Mars Rover stops at obstacles. Obstacles are list of pair positive integer numbers like (2 3)(6 1)(9 7)</param>
-        /// <param name="initialPosition">Initial position of Mars Rover. Initial position contains 2 positive integer numbers and initial direction (N, n, S, s, W, w, E, e) like 4 8 N</param>
-        /// <param name="commands">Commands could contain F, f, B, b, R, r, L, l characters for moving forward, backward, turning right, turning left like FrlLLRFffBRbbLllrrR</param>
-        /// <returns>
-        /// The last position that Mars Rover could move to if no exception had been throwed.
-        /// </returns>
+        /// <param name="inputs">
+        ///     <param name="edges">Mars Rover wraps at edges. Edges are 2 positive integer numbers like 5 5</param>
+        ///     <param name="obstacles">Mars Rover stops at obstacles. Obstacles are list of pair positive integer numbers like (2 3)(6 1)(9 7)</param>
+        ///     <param name="initialPosition">Initial position of Mars Rover. Initial position contains 2 positive integer numbers and initial direction (N, n, S, s, W, w, E, e) like 4 8 N</param>
+        ///     <param name="commands">Commands could contain F, f, B, b, R, r, L, l characters for moving forward, backward, turning right, turning left like FrlLLRFffBRbbLllrrR</param>
+        /// </param>
+        /// <returns>The last position that Mars Rover could move to if no exception had been throwed.</returns>
         [HttpPost]
-        public async Task<ActionResult<CommandsResult>> Move(string edges, string obstacles, string initialPosition, string commands)
+        public async Task<ActionResult> Move(InitialInputs inputs)
         {
             var request = new MovementHandlerRequest() { 
-                Edges = edges,
-                Obstacles = obstacles ?? "",
-                InitialPosition = initialPosition,
-                Commands = commands
+                Edges = inputs.Edges,
+                Obstacles = inputs.Obstacles ?? "",
+                InitialPosition = inputs.InitialPosition,
+                Commands = inputs.Commands
             };
             try
             {

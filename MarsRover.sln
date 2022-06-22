@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarsRover.WebApi", "MarsRover.WebApi\MarsRover.WebApi.csproj", "{6919B74A-2EBE-46FB-A8D3-BA44F618E2DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MarsRover.WebApi", "MarsRover.WebApi\MarsRover.WebApi.csproj", "{6919B74A-2EBE-46FB-A8D3-BA44F618E2DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarsRover.Domain", "MarsRover.Domain\MarsRover.Domain.csproj", "{27A0637A-632F-4436-8FD0-91CDA9AEFF46}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MarsRover.Domain", "MarsRover.Domain\MarsRover.Domain.csproj", "{27A0637A-632F-4436-8FD0-91CDA9AEFF46}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarsRover.Domain.Test", "MarsRover.Domain.Test\MarsRover.Domain.Test.csproj", "{3CBAA145-B215-49F0-B14E-8D8D00C3C9CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MarsRover.Domain.Test", "MarsRover.Domain.Test\MarsRover.Domain.Test.csproj", "{3CBAA145-B215-49F0-B14E-8D8D00C3C9CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarsRover.Models", "MarsRover.Models\MarsRover.Models.csproj", "{CCDE3626-2838-4ACA-A053-0FFEECE89BB0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MarsRover.Models", "MarsRover.Models\MarsRover.Models.csproj", "{CCDE3626-2838-4ACA-A053-0FFEECE89BB0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarsRover.WebApi.Test", "MarsRover.WebApi.Test\MarsRover.WebApi.Test.csproj", "{D20DA94F-FCCB-47EA-BCEA-DA810C7E5E2C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{CCDE3626-2838-4ACA-A053-0FFEECE89BB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CCDE3626-2838-4ACA-A053-0FFEECE89BB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CCDE3626-2838-4ACA-A053-0FFEECE89BB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D20DA94F-FCCB-47EA-BCEA-DA810C7E5E2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D20DA94F-FCCB-47EA-BCEA-DA810C7E5E2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D20DA94F-FCCB-47EA-BCEA-DA810C7E5E2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D20DA94F-FCCB-47EA-BCEA-DA810C7E5E2C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
