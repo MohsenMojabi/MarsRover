@@ -17,7 +17,7 @@ namespace MarsRover.Domain.Test
         public MarsRoverMovementsTest()
         {
             _movementRepository = new MovementRepository();
-            _movementRepository.SetCurrentPosition((-4, 6));
+            _movementRepository.SetCurrentPosition((4, 6));
             _movementRepository.SetCurrentDirection(DirectionEnum.North);
         }
 
@@ -237,6 +237,15 @@ namespace MarsRover.Domain.Test
         {
             Assert.Throws<ArgumentException>(() =>
                 ObstaclesInputValidator.Validate(obstacles));
+        }
+
+        [Theory]
+        [InlineData("(1 2)", "(1 2)")]
+        [InlineData("(1 2)", "(4 7)(1 2)(6 10)")]
+        public void Should_Throw_Exception_When_Obstacles_Exist_For_Next_Position(string newPosition, string obstacles)
+        {
+            Assert.Throws<InvalidOperationException>(() =>
+                ObstacleDetectionValidator.Validate(newPosition, obstacles));
         }
 
         [Theory]
