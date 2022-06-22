@@ -26,7 +26,7 @@ namespace MarsRover.WebApi.Controllers
         /// </summary>
         /// <param name="edges">Mars Rover wraps at edges. Edges are 2 positive integer numbers like 5 5</param>
         /// <param name="obstacles">Mars Rover stops at obstacles. Obstacles are list of pair positive integer numbers like (2 3)(6 1)(9 7)</param>
-        /// <param name="initialPosition">Initial position of Mars Rover. Initial position contains 2 positive integer numbers like 4 8</param>
+        /// <param name="initialPosition">Initial position of Mars Rover. Initial position contains 2 positive integer numbers and initial direction (N, n, S, s, W, w, E, e) like 4 8 N</param>
         /// <param name="commands">Commands could contain F, f, B, b, R, r, L, l characters for moving forward, backward, turning right, turning left like FrlLLRFffBRbbLllrrR</param>
         /// <returns>
         /// The last position that Mars Rover could move to if no exception had been throwed.
