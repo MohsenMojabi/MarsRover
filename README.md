@@ -10,7 +10,7 @@
 After running the application, the swagger UI will be displayed.
 <br />All the parameters are required except obstacles.
 
-<br />  **edges**   ===>   2 integer for edges in this syntax : **10 10**
+<br />  **edges**   ===>   2 integers for edges in this syntax : **10 10**
 <br />  **obstacles(optional)**   ===>   List of all obstacles in this syntax : **(3 4)(2 3)(6 4)**
 <br />  **initialPosition**   ===>   Initial position and direction of the rover in this syntax : **7 5 n**
 <br />  **commands**   ===>   Sequence of commands in this syntax : **fflbBRfFfLbBrFff**
